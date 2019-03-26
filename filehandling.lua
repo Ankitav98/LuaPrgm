@@ -1,0 +1,7 @@
+local f = io.open("open.txt", "r")
+ local content = f:read("*all")
+ f:close()
+ content = string.gsub(content, "Hello", "Hello guys")
+ local f = io.open("open.txt", "w")
+ f:write(content)
+ f:close()
